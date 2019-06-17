@@ -1,4 +1,4 @@
-package primeira_parte.tipos_variaveis;
+package parte_1;
 
 public class TipoFlutuante {
 
