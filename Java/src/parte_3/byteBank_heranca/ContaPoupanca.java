@@ -6,4 +6,9 @@ public class ContaPoupanca extends Contas {
 		super(agencia, numero);
 		// TODO Auto-generated constructor stub
 	}
+
+	@Override
+	public void deposita(double valor) {
+		this.saldo += valor;
+	}
 }

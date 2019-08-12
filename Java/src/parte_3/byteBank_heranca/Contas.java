@@ -1,7 +1,7 @@
 package parte_3.byteBank_heranca;
 
-public class Contas {
-	private double saldo;
+public abstract class Contas {
+	protected double saldo;
 	private int agencia;
 	private int numero;
 	private Client titular;
@@ -21,10 +21,8 @@ public class Contas {
 		return this.saldo;
 	}
 
-	public void deposita(double valor) {
-		this.saldo += valor;
-	}
-
+	public abstract void deposita(double valor); 
+	
 	public boolean saca(double valor) {
 		if (this.saldo >= valor) {
 //			System.out.println("Você sacou: " + valor);

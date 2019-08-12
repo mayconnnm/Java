@@ -1,4 +1,4 @@
-package parte_3;
+package parte_3.funcionario;
 
 // Extends significa que a classe filho recebe tudo que possuir na classe mãe
 public class Gerente extends Funcionario {
@@ -18,6 +18,6 @@ public class Gerente extends Funcionario {
 
 	public double bonificacao() {
 		// Super indica que o atributo está definido na classe mãe
-		return super.bonificacao() + super.getSalario() /* super.salario */;
+		return super.getSalario() /* super.salario */;
 	}
 }

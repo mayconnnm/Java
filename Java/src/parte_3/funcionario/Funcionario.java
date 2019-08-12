@@ -1,6 +1,6 @@
-package parte_3;
+package parte_3.funcionario;
 
-public class Funcionario {
+public abstract class Funcionario {
 	private String nome;
 	private String cpf;
 	// O modificador protected deixa o atributo público somente para a classe
@@ -28,11 +28,9 @@ public class Funcionario {
 		}
 	}
 
-	public double bonificacao() {
-		return this.salario * 0.1;
-	}
+	public abstract double bonificacao();
 
-	public String getNome() {
+		public String getNome() {
 		return nome;
 	}
 

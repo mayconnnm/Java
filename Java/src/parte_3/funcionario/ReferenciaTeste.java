@@ -1,4 +1,4 @@
-package parte_3;
+package parte_3.funcionario;
 
 public class ReferenciaTeste {
 	public static void main(String[] args) {

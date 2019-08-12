@@ -1,4 +1,4 @@
-package parte_3;
+package parte_3.funcionario;
 
 public class ControleBonificacao {
 

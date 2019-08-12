@@ -1,6 +1,6 @@
-package parte_3;
+package parte_3.funcionario;
 
-public class Editor extends Funcionario {
+public class Designer extends Funcionario {
 
 	private String senha;
 
@@ -17,6 +17,6 @@ public class Editor extends Funcionario {
 	}
 
 	public double bonificacao() {
-		return super.bonificacao() + 300;
+		return 300;
 	}
 }
