@@ -7,25 +7,15 @@ public abstract class Funcionario {
 	// mãe(classe onde extá implementada) e os filhos(que extendem)
 	// protected double salario;
 	private double salario;
-	private String senha;
 
 	public Funcionario() {
 
 	}
 
-	public Funcionario(String nome, String cpf, double salario, String senha) {
+	public Funcionario(String nome, String cpf, double salario) {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.salario = salario;
-		this.senha = senha;
-	}
-
-	public boolean autentica(String senha) {
-		if (this.senha.equals(senha)) {
-			return true;
-		} else {
-			return false;
-		}
 	}
 
 	public abstract double bonificacao();
@@ -52,9 +42,5 @@ public abstract class Funcionario {
 
 	public void setSalario(double salario) {
 		this.salario = salario;
-	}
-
-	public void setSenha(String senha) {
-		this.senha = senha;
 	}
 }

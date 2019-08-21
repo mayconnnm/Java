@@ -1,6 +1,6 @@
 package parte_3.byteBank_heranca;
 
-public class ContaCorrente extends Contas {
+public class ContaCorrente extends Contas implements Tributavel {
 
 	public ContaCorrente(int agencia, int numero) {
 		super(agencia, numero);
@@ -9,7 +9,7 @@ public class ContaCorrente extends Contas {
 
 	@Override
 	public boolean saca(double valor) {
-		double valorSacado = valor + 0.2;
+		double valorSacado = valor + 0.02;
 		System.out.println(valorSacado);
 		return super.saca(valorSacado);
 	}
@@ -17,5 +17,10 @@ public class ContaCorrente extends Contas {
 	@Override
 	public void deposita(double valor) {
 		this.saldo += valor;
+	}
+
+	@Override
+	public double getValorImposto() {
+		return getSaldo() * 0.01;
 	}
 }

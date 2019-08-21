@@ -35,7 +35,7 @@ public abstract class Contas {
 	}
 
 	public boolean transfere(double valor, Contas destino) {
-		if (this.saca(valor)) {
+		if (saca(valor)) {
 			destino.deposita(valor);
 			return true;
 		} else {
