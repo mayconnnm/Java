@@ -7,11 +7,14 @@ public class ContasTeste {
 
 		cc.deposita(500);
 		cp.deposita(200);
-		cc.transfere(10, cp);
-		cc.saca(10);
+		try {
+			cc.transfere(1000, cp);
+			cc.saca(10);
+		} catch (SaldoException e) {
+			e.printStackTrace();
+		}
 		System.out.println(cp.getSaldo());
 		System.out.println(cc.getSaldo());
-	
 
 	}
 }
