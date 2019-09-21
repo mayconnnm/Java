@@ -22,6 +22,6 @@ public class TesteArrayReferencias {
 		Object[] obj = new Object[10];
 		ContaCorrente cc = new ContaCorrente(1020, 3040);
 		obj[0] = cc;
-		System.out.println(obj[0].);
+		System.out.println(obj[0]);
 	}
 }
