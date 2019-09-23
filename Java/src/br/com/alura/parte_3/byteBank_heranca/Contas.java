@@ -30,7 +30,7 @@ public abstract class Contas {
 		this.saldo -= valor;
 	}
 
-	public void transfere(double valor, Contas destino) throws SaldoException{
+	public void transfere(double valor, Contas destino) throws SaldoException {
 		saca(valor);
 		destino.deposita(valor);
 	}
@@ -69,5 +69,17 @@ public abstract class Contas {
 
 	public Client getTitular() {
 		return titular;
+	}
+
+	public boolean equals(Object ref) {
+		Contas outra = (Contas) ref;
+
+		if (this.agencia != outra.agencia) {
+			return false;
+		}
+		if (this.numero != outra.numero) {
+			return false;
+		}
+		return true;
 	}
 }

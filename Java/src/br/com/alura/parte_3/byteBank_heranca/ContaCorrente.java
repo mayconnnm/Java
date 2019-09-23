@@ -8,7 +8,7 @@ public class ContaCorrente extends Contas implements Tributavel {
 	}
 
 	@Override
-	public void saca(double valor) throws SaldoException{
+	public void saca(double valor) throws SaldoException {
 		double valorSacado = valor + 0.02;
 		System.out.println(valorSacado);
 		super.saca(valorSacado);
@@ -22,5 +22,10 @@ public class ContaCorrente extends Contas implements Tributavel {
 	@Override
 	public double getValorImposto() {
 		return getSaldo() * 0.01;
+	}
+
+	@Override
+	public String toString() {
+		return "Conta-Corrente: " + "Ag. " + this.getAgencia() + " Conta " + this.getNumero();
 	}
 }
