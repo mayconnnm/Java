@@ -1,6 +1,7 @@
 package br.com.alura.parte_3.byteBank_heranca;
 
-public abstract class Contas {
+// Comparable é uma interface para comparar uma classe com a outra, comparando em ordem natural
+public abstract class Contas extends Object implements Comparable<Contas> {
 	protected double saldo;
 	private int agencia;
 	private int numero;
@@ -69,6 +70,12 @@ public abstract class Contas {
 
 	public Client getTitular() {
 		return titular;
+	}
+
+	@Override
+	public int compareTo(Contas outra) {
+
+		return Double.compare(this.saldo, outra.saldo);
 	}
 
 	public boolean equals(Object ref) {

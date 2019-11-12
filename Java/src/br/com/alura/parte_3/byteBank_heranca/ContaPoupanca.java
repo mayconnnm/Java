@@ -11,4 +11,9 @@ public class ContaPoupanca extends Contas {
 	public void deposita(double valor) {
 		this.saldo += valor;
 	}
+	
+	@Override
+	public String toString() {
+		return "Conta-Poupanca: " + "Ag. " + this.getAgencia() + " Conta " + this.getNumero();
+	}
 }
